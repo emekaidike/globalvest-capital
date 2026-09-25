@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GlobalVest Capital — Create your account">
+  <title>Register | GlobalVest Capital</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Global<span>Vest</span></a>
+      <nav class="nav" id="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#plans">Investment Options</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline">Back Home</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="auth-grid">
+      <div class="auth-card">
+        <h2>Create your account</h2>
+        <p style="color: #5d6b7d; margin-bottom: 1.5rem;">Join GlobalVest Capital to access investment opportunities</p>
+
+        <form id="registerForm">
+          <div class="inline-form">
+            <div>
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="John" required>
+            </div>
+            <div>
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Doe" required>
+            </div>
+          </div>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
+
+          <label for="country">Country of Residence</label>
+          <input type="text" id="country" placeholder="United States" required>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="••••••••" required>
+
+          <label style="display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 1rem;">
+            <input type="checkbox" required style="width: 18px; height: 18px; margin-top: 0.2rem; flex-shrink: 0;">
+            <span style="color: #5d6b7d; font-size: 0.92rem;">I agree to the <a href="terms.html" style="color: #0a4d8c; font-weight: 700;">Terms of Service</a> and <a href="privacy.html" style="color: #0a4d8c; font-weight: 700;">Privacy Policy</a></span>
+          </label>
+
+          <button type="submit" class="btn btn-primary full-width">Create Account</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+
+      <div class="auth-side">
+        <h3>What comes next?</h3>
+        <p>After creating your account, you will need to verify your identity through our KYC process to access investment products.</p>
+        <a href="login.html" class="btn btn-outline full-width" style="margin-top: 1rem;">Already have an account?</a>
+        <ul>
+          <li>Account creation</li>
+          <li>Identity verification</li>
+          <li>Account activation</li>
+          <li>Investment access</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo">Global<span>Vest</span></a>
+        <p>A global digital investment platform focused on transparency and accessible investment information.</p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <a href="index.html#plans">Investment Options</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="terms.html">Terms</a>
+        <a href="risk-disclosure.html">Risk Disclosure</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> GlobalVest Capital. All rights reserved.</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('formMessage');
+      msg.textContent = 'Registration functionality requires backend integration.';
+    });
+  </script>
+</body>
+</html>
